@@ -1,0 +1,30 @@
+# Reference this view as payments
+schema: dbo
+
+dimensions:
+  payment_id:
+    format: ID
+    description: Uniquely identifies this payment
+    primary_key: true
+
+  booking_id:
+    format: ID
+    description: The booking that was paid for
+
+  amount:
+    description: The amount paid
+
+  payment_method:
+    description: The method used for payment (e.g., 'credit_card', 'paypal',
+      'apple_pay', 'google_pay', 'bank_transfer')
+
+  status:
+    description: The status of the payment (e.g., 'pending', 'completed', 'failed',
+      'refunded')
+
+  payment_date:
+    description: The date the payment was made
+
+measures:
+  count:
+    aggregate_type: count

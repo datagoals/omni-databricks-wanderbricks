@@ -1,0 +1,46 @@
+# Reference this view as booking_updates
+schema: dbo
+
+dimensions:
+  booking_id:
+    format: ID
+    description: The identified of the booking being updated
+
+  booking_update_id:
+    format: ID
+    description: Uniquely identifies this update
+    primary_key: true
+
+  check_in:
+    description: The new check-in date
+
+  check_out:
+    description: The new check-out date
+
+  created_at:
+    description: The date the booking was created (must match the booking) or be null
+
+  guests_count:
+    description: The new number of guests
+
+  property_id:
+    format: ID
+    description: The identifier of the booked property (must match the property of
+      the booking)
+
+  status:
+    description: The new status for the booking
+
+  total_amount:
+    description: The new total amount due
+
+  updated_at:
+    description: The date this update was created
+
+  user_id:
+    format: ID
+    description: The user that created/updated the booking
+
+measures:
+  count:
+    aggregate_type: count

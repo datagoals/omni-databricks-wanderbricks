@@ -1,0 +1,39 @@
+# Reference this view as reviews
+schema: dbo
+
+dimensions:
+  booking_id:
+    format: ID
+    description: The booking that was reviewed
+
+  comment:
+    description: User's review comment
+
+  created_at:
+    description: The date the review was created
+
+  is_deleted:
+    description: Whether the review was deleted
+
+  property_id:
+    format: ID
+    description: The property that was reviewed
+
+  rating:
+    description: The rating given by the user (1.0-5.0)
+
+  review_id:
+    format: ID
+    description: Uniquely identifies this review
+    primary_key: true
+
+  updated_at:
+    description: The date the review was last updated
+
+  user_id:
+    format: ID
+    description: The user that wrote the review
+
+measures:
+  count:
+    aggregate_type: count

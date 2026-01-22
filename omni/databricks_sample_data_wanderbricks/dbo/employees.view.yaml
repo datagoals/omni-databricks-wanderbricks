@@ -1,0 +1,40 @@
+# Reference this view as employees
+schema: dbo
+
+dimensions:
+  employee_id:
+    format: ID
+    description: Unique identifier of the employee
+    primary_key: true
+
+  host_id:
+    format: ID
+    description: The identifier of the host employer of this employee
+
+  name:
+    description: Employee's full name
+
+  role:
+    description: Employee's role (e.g., cleaner, chef)
+
+  email:
+    description: Employee's email address
+
+  phone:
+    description: Employee's phone number
+
+  country:
+    description: Employee's country of employment
+
+  joined_at:
+    description: Date the employee joined
+
+  end_service_date:
+    description: Date the employee left if the employee has left
+
+  is_currently_employed:
+    description: Boolean indicating if the employee is currently active
+
+measures:
+  count:
+    aggregate_type: count

@@ -1,0 +1,33 @@
+# Reference this view as users
+schema: dbo
+
+dimensions:
+  user_id:
+    format: ID
+    description: Unique identifier of the user
+    primary_key: true
+
+  email:
+    description: User's email address.
+
+  name:
+    description: Name of the user.
+
+  country:
+    description: Country of residence.
+
+  user_type:
+    description: Type of user (e.g., individual or business).
+
+  created_at:
+    description: Account creation date.
+
+  is_business:
+    description: Boolean indicating if the user is a business.
+
+  company_name:
+    description: Name of the company (if user is a business).
+
+measures:
+  count:
+    aggregate_type: count

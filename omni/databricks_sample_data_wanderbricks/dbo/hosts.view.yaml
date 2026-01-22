@@ -1,0 +1,36 @@
+# Reference this view as hosts
+schema: dbo
+
+dimensions:
+  host_id:
+    format: ID
+    description: Unique identifier of the host
+    primary_key: true
+
+  name:
+    description: Host's full name
+
+  email:
+    description: Hosts's email address
+
+  phone:
+    description: Host's phone number
+
+  is_verified:
+    description: Verification status of the host
+
+  is_active:
+    description: Active status of the host
+
+  rating:
+    description: Host rating (1.0-5.0)
+
+  country:
+    description: Host's country of residence
+
+  joined_at:
+    description: Date the host joined
+
+measures:
+  count:
+    aggregate_type: count

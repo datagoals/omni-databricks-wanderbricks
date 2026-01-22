@@ -1,0 +1,41 @@
+# Reference this view as bookings
+schema: dbo
+
+dimensions:
+  booking_id:
+    format: ID
+    description: Unique identifier of the booking
+    primary_key: true
+
+  user_id:
+    format: ID
+    description: The identifier of the user making the booking
+
+  property_id:
+    format: ID
+    description: Foreign Key to 'properties'
+
+  check_in:
+    description: Check-in date
+
+  check_out:
+    description: Check-out date
+
+  guests_count:
+    description: Number of guests for booking
+
+  total_amount:
+    description: Total amount paid
+
+  status:
+    description: Status of the booking (e.g., pending, confirmed)
+
+  created_at:
+    description: Date the booking was created
+
+  updated_at:
+    description: Date the booking was last updated
+
+measures:
+  count:
+    aggregate_type: count

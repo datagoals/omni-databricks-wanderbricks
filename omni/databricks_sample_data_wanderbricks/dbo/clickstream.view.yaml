@@ -1,0 +1,37 @@
+# Reference this view as clickstream
+schema: dbo
+
+dimensions:
+  event:
+    description: |-
+      The type of event that occurred: 
+              - 'view' (user views a property)
+              - 'click' (user clicks on property or related element)
+              - 'search' (user conducts a search)
+              - 'filter' (user applies a filter to refine search results)
+
+  metadata:
+    description: "A nested dictionary containing additional details about the event:
+
+      \        - 'device': The type of device used, e.g. 'desktop', 'mobile',
+      'tablet'
+
+      \        - 'referrer': The source of the traffic, e.g 'google', 'direct',
+      'email', 'ad'
+
+      \        "
+
+  property_id:
+    format: ID
+    description: The property that the user is interacting with
+
+  timestamp:
+    description: The timestamp of the interaction
+
+  user_id:
+    format: ID
+    description: The user that created/updated the booking
+
+measures:
+  count:
+    aggregate_type: count

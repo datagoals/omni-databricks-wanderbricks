@@ -1,0 +1,25 @@
+# Reference this view as customer_support_logs
+schema: dbo
+
+dimensions:
+  created_at:
+    description: The date the ticket was created
+
+  messages:
+    description: List of messages in the ticket.
+
+  support_agent_id:
+    format: ID
+    description: identifier for the support agent
+
+  ticket_id:
+    format: ID
+    description: The ticket assigned to the interaction
+
+  user_id:
+    format: ID
+    description: The user that contacted customer support
+
+measures:
+  count:
+    aggregate_type: count

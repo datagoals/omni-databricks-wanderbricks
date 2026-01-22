@@ -1,0 +1,16 @@
+# Reference this view as countries
+schema: dbo
+
+dimensions:
+  country:
+    description: The name of the country (Primary Key
+
+  country_code:
+    description: The ISO country code (2-letter)
+
+  continent:
+    description: The continent the country is located in
+
+measures:
+  count:
+    aggregate_type: count

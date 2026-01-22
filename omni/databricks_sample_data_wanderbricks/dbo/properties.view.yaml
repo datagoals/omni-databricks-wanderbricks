@@ -1,0 +1,49 @@
+# Reference this view as properties
+schema: dbo
+
+dimensions:
+  property_id:
+    format: ID
+    description: Unique identifier of this property
+
+  host_id:
+    format: ID
+    description: The identifier of the host of this property
+
+  destination_id:
+    format: ID
+    description: Foreign Key to 'destinations'
+
+  title:
+    description: Title of the property listing
+
+  description:
+    description: Description of the property
+
+  base_price:
+    description: Base price for booking
+
+  property_type:
+    description: Type of property (e.g., house, apartment)
+
+  max_guests:
+    description: Maximum number of guests allowed
+
+  bedrooms:
+    description: Number of bedrooms
+
+  bathrooms:
+    description: Number of bathrooms
+
+  property_latitude:
+    description: Latitude of the property location
+
+  property_longitude:
+    description: Longitude of the property location
+
+  created_at:
+    description: Date the property was listed
+
+measures:
+  count:
+    aggregate_type: count

@@ -1,0 +1,20 @@
+# Reference this view as amenities
+schema: dbo
+
+dimensions:
+  amenity_id:
+    format: ID
+    description: Unique identifier of the amenity
+
+  name:
+    description: Name of the amenity (e.g., Wi-Fi, Pool)
+
+  category:
+    description: Category of the amenity (e.g.,  Basic, Luxury)
+
+  icon:
+    description: Icon representing the amenity
+
+measures:
+  count:
+    aggregate_type: count

@@ -1,0 +1,32 @@
+# Reference this view as destinations
+schema: dbo
+
+dimensions:
+  destination_id:
+    format: ID
+    description: Primary Key
+    primary_key: true
+
+  destination:
+    description: Name of the destination
+
+  country:
+    description: Name of the country
+
+  state_or_province:
+    description: The name of the state, province or region the destination is located in
+
+  state_or_province_code:
+    description: The code of the state, province or region the destination is located in
+
+  description:
+    description: Detailed description of the destination. This column has text data
+      (Markdown format) containing summary information of the destination about
+      tourist destinations, destination demographics, historical and
+      geographical information, and popular cuisine you can find in the
+      destination. Additionally, tourists might find transportation and travel
+      guidelines helpful.
+
+measures:
+  count:
+    aggregate_type: count

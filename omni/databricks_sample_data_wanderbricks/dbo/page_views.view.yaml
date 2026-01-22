@@ -1,0 +1,31 @@
+# Reference this view as page_views
+schema: dbo
+
+dimensions:
+  device_type:
+    description: Type of device used (e.g., desktop', 'mobile', 'tablet')
+
+  page_url:
+    description: URL of the viewed page
+
+  property_id:
+    format: ID
+    description: The property that was viewed
+
+  referrer:
+    description: Referrer source (e.g., 'google', 'direct', 'email', 'ad')
+
+  timestamp:
+    description: The payment method used
+
+  user_id:
+    format: ID
+    description: The user that viewed the property
+
+  view_id:
+    format: ID
+    description: Uniquely identifies this view
+
+measures:
+  count:
+    aggregate_type: count

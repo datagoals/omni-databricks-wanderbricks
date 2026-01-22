@@ -1,0 +1,27 @@
+# Reference this view as property_images
+schema: dbo
+
+dimensions:
+  image_id:
+    format: ID
+    description: Unique identifier of the property image
+
+  property_id:
+    format: ID
+    description: The identifier of the property for this image
+
+  url:
+    description: URL of the image
+
+  sequence:
+    description: the order in which to show the images
+
+  is_primary:
+    description: Boolean indicating if the image is primary
+
+  uploaded_at:
+    description: Date the image was uploaded
+
+measures:
+  count:
+    aggregate_type: count

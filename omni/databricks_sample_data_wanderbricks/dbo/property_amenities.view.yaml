@@ -1,0 +1,15 @@
+# Reference this view as property_amenities
+schema: dbo
+
+dimensions:
+  property_id:
+    format: ID
+    description: Foreign Key to 'properties'
+
+  amenity_id:
+    format: ID
+    description: Foreign Key to 'amenities'
+
+measures:
+  count:
+    aggregate_type: count
