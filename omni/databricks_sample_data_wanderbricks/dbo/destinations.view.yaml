@@ -1,4 +1,7 @@
 # Reference this view as destinations
+description: A destination will have multiple properties, the destination is a
+  location 'bucket' for properties all in the same geographical area.
+
 schema: dbo
 
 dimensions:
@@ -30,3 +33,5 @@ dimensions:
 measures:
   count:
     aggregate_type: count
+
+ai_context: Destinations are also known as resorts or locations.

@@ -1,0 +1,44 @@
+base_view: reviews
+label: Reviews
+group_label: Customer Feedback
+description: Analyze customer reviews and ratings for properties, including
+  review content, scores, and relationships to bookings, properties, hosts, and
+  guests.
+
+fields:
+  [
+    all_views.*,
+    -bookings.updated_at,
+    -reviews.updated_at,
+    -destinations.destination_id,
+    -bookings.property_id,
+    bookings.booking_id,
+    -bookings.user_id,
+    -hosts.host_id,
+    -properties.destination_id,
+    -properties.host_id,
+    -properties.property_id,
+    -reviews.property_id,
+    -reviews.booking_id,
+    -reviews.user_id,
+    -users.user_id
+  ]
+
+joins:
+  bookings:
+    properties:
+      hosts: {}
+      destinations: {}
+  users: {}
+
+ai_context: Use this topic to analyze customer review patterns, ratings, and
+  feedback. Choose 'reviews' view for review content, ratings, and timestamps.
+  Join with 'properties' to analyze reviews by property type, location, or
+  amenities. Join with 'hosts' to evaluate host performance based on review
+  scores. Join with 'bookings' to correlate reviews with booking details like
+  stay duration or booking dates. Join with 'users' to segment reviews by
+  reviewer demographics or history. Join with 'destinations' to compare review
+  trends across locations. Use 'property_images' when analyzing how visual
+  presentation correlates with review sentiment. Focus on metrics like average
+  ratings, review volume over time, sentiment analysis, and factors influencing
+  positive/negative feedback.
