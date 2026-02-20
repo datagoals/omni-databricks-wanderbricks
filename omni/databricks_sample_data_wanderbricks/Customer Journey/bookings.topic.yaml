@@ -6,6 +6,9 @@ description: |
   tell us WHO stayed WHERE, and contains the check in and check out dates.
 
 fields: [ all_views.*, -property_images.property_id ]
+access_filters:
+  - field: destinations.country
+    user_attribute: country_access
 # Only include 2024 onwards by default
 default_filters:
   bookings.check_in:

@@ -8,3 +8,8 @@ ai_context: |
     > explain your reasoning of how you picked the fields in detail (9-10 sentences)
     > another 3-4 sentences on alternative queries or fields you could have chosen
     > finally add 4 markdown links as follow up questions 
+
+access_grants:
+  dev_views:
+    user_attribute: dev_views
+    allowed_values: [ "1" ]
