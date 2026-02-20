@@ -1,0 +1,18 @@
+group_label: customer_journey
+# this is the bookings topic
+description: |
+  Contains data about Wanderbricks property bookings, joins on the users and property tables to
+  tell us WHO stayed WHERE, and contains the check in and check out dates.
+
+# Only include 2024 onwards by default
+default_filters:
+  bookings.check_in:
+    on_or_after: 2024-01-01
+
+# Based on the bookings table, we then join on users and properties and from properties to destinations, hosts and images
+joins:
+  users: {}
+  properties:
+    destinations: {}
+    hosts: {}
+    property_images: {}
