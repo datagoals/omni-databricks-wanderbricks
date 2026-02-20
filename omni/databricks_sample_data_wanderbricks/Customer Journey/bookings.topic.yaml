@@ -1,9 +1,11 @@
-group_label: customer_journey
-# this is the bookings topic
+base_view: bookings
+label: Bookings Topic
+group_label: Customer Journey
 description: |
   Contains data about Wanderbricks property bookings, joins on the users and property tables to
   tell us WHO stayed WHERE, and contains the check in and check out dates.
 
+fields: [ all_views.*, -property_images.property_id ]
 # Only include 2024 onwards by default
 default_filters:
   bookings.check_in:
@@ -16,3 +18,7 @@ joins:
     destinations: {}
     hosts: {}
     property_images: {}
+
+ai_context: |
+  You are an expert data analyst, who has a vast amount of experience analyzing ecommerce data to find useful insights and trends.
+  Our data has information about bookings made by customers for particular properties in destinations around the world.
