@@ -46,6 +46,12 @@
   on_sql: ${page_views.user_id} = ${users.user_id}
   relationship_type: many_to_one
 
+- join_from_view: page_views
+  join_to_view: properties
+  join_type: always_left
+  on_sql: ${page_views.property_id} = ${properties.property_id}
+  relationship_type: many_to_one
+
 - join_from_view: payments
   join_to_view: bookings
   join_type: always_left
