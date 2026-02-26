@@ -44,3 +44,11 @@ measures:
     sql: ${total_amount}
     description: Total amount paid
     aggregate_type: sum
+
+  avg_booking_amount:
+    sql: ${booking_amount}/${booking_count}
+
+  average_amount:
+    sql: CASE WHEN ${bookings.booking_count} = 0 THEN NULL ELSE
+      COALESCE(${bookings.booking_amount}, 0) / ${bookings.booking_count} END
+    label: Average Amount
