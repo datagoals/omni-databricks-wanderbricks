@@ -1,4 +1,6 @@
 # Reference this view as amenities
+required_access_grants: [ dev_views ]
+
 schema: dbo
 
 dimensions:
